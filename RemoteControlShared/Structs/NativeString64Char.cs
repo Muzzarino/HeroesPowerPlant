@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace RemoteControl.Structs
+namespace RemoteControlShared.Structs
 {
     /// <summary>
     /// Contains the various structures used to call individual functions.

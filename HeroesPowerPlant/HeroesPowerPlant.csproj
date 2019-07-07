@@ -714,6 +714,10 @@
       <Project>{3cc13c40-7e3f-42f8-aca8-37ca14bb57a4}</Project>
       <Name>GenericStageInjectionCommon</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RemoteControlShared\RemoteControlShared.csproj">
+      <Project>{6d43f871-d69b-476f-ad27-749be34967a6}</Project>
+      <Name>RemoteControlShared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RemoteControl\RemoteControl.csproj">
       <Project>{f9ccc7a9-aa2e-4f18-88d1-56a4378d2db3}</Project>
       <Name>RemoteControl</Name>

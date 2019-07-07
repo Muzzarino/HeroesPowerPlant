@@ -9,18 +9,13 @@ using System.Windows.Forms;
 using Reloaded.Hooks.X86;
 using Reloaded.Memory.Sources;
 using RemoteControl.Bootstrap;
-using RemoteControl.Structs;
+using RemoteControlShared.Structs;
 using static Reloaded.Hooks.X86.FunctionAttribute;
 
 namespace RemoteControl
 {
     public unsafe class CollisionReloader
     {
-        /// <summary>
-        /// Name of the method to load the collision mid-game.
-        /// </summary>
-        public static string LoadCollisionFunctionName = nameof(LoadCollision);
-
         /// <summary>
         /// Pointer to the <see cref="InitCollision"/> function.
         /// </summary>
@@ -48,6 +43,7 @@ namespace RemoteControl
             _initCollision = Wrapper.Create<InitCollision>(InitCollisionPtr);
         }
 
+        // NOTE: DO NOT CHANGE NAME. NAME IS USED IN RemoteControlShared.
         /// <param name="nativeStringPtr">Pointer to a <see cref="NativeString64Char"/> with the name of the file in the collision folder minus extension e.g. "s01"</param>
         [DllExport]
         public static void LoadCollision(int nativeStringPtr)
